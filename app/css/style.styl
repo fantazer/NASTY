@@ -1,0 +1,283 @@
+//@import "grid/_grid.styl"
+@import 'rupture'
+@import "variable/_function.styl"
+@import "variable/_ie.styl"
+@import "variable/_helper.styl"
+@import "grid/grid.css"
+@import "grid/extends.css"
+
+@import "variable/config/_config.styl"
+@import "variable/config/_grid.styl"
+@import "variable/_default.styl"
+
+@import "variable/config/_color.styl"
+@import "variable/config/_typography.styl"
+@import "variable/config/_btn.styl"
+@import "variable/config/_input.styl"
+@import "../module/**/*"
+
+
+body
+	@extend .type--main
+	font-family $font
+	color black
+	line-height 1.4
+	letter-spacing 0.01em
+
+.type--header
+	font-family: PlayfairDisplay
+
+.main-cont
+	center(1200px,10px)
+
+.page
+	f()
+	fl()
+	min-height 100vh
+
+.content
+	flex-grow 1
+	overflow: hidden
+
+.content--mid
+	flex(mid)
+
+// animate top menu
+@keyframes slideInDown
+	from
+		transform: translate3d(0, -100%, 0)
+		visibility: visible;
+	to
+		transform: translate3d(0, 0, 0)
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out;
+	z-index 10
+// animate top menu === end
+
+// modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all .8s // duration for fade
+	opacity 0
+	&.active
+		visibility: visible
+		opacity 1
+		transition all .4s // duration for fade
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: #18191da1
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal-wrap
+	position: fixed
+	width: 100%
+	height: 100%
+	overflow-y auto
+	flex(mid)
+
+.modal
+	+below(640px)
+		width: 100%
+		box-shadow 0 0 0
+	transform scale(.9) translateZ(0) translate3d(0, 0, 0)
+	will-change: transform, opacity;
+	backface-visibility: hidden
+	position: absolute
+	opacity 0
+	transition transform .6s, opacity .4s
+	max-width 400px
+	left -9999px
+	top -9999px
+	&.active
+		max-height 100%
+		opacity 1
+		transform scale(1) translateZ(0) translate3d(0, 0, 0)
+		position: relative
+		z-index 1000
+		left initial
+		top initial
+		will-change: transform, opacity
+	&.modal-hide-animation
+		transform scale(.9)
+		opacity 0
+		transition transform .6s, opacity .8s
+
+
+.modal-content
+	+below(640px)
+		height: 100%
+		padding: 20px
+		overflow-y scroll
+		width: 95%!important
+	margin: 20px auto
+	background: white
+	position: relative
+	padding: 40px 45px
+	br(40px)
+
+.modal-close
+	+below(768px)
+		top 12px
+		right 12px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	size 50px
+	br(20px)
+	flex(mid)
+	z-index 10
+	background: #f8f8f8
+	&:hover
+		.icon
+			opacity: 1
+	.icon
+		tr()
+		size 12px
+		fill black
+		opacity:.3
+// modal === end
+
+// slider menu
+.head-toggle
+	cp()
+	+above(1025px)
+		display: none
+	.icon-close
+		display: none
+
+.head-toggle
+	&.active
+		.icon-close
+			display: block
+		.icon-open
+			display: none
+.slide-block
+	+below(640px)
+		top 60px
+		height: calc(100% - 60px) // Высота шапки
+	+below(480px)
+		width: 100%
+	position: fixed
+	top 60px // Высота шапки
+	width: 360px
+	tr(all)
+	height: calc(100% - 60px) // Высота шапки
+	z-index 100
+	background: white
+	&.active
+		transform translateX(0%)
+.slide-block--left
+	left 0
+	transform translateX(-100%)
+
+.slide-block--right
+	right 0
+	transform translateX(100%)
+
+.slide-nav__el
+	display  block
+
+.slide-block-wrap
+	padding: 24px
+// slider menu === end
+
+
+.header
+	padding-top: 32px
+
+.logo
+	width: 35%
+
+.header-cont
+	f()
+	justify-content space-between
+	align-items center
+
+.header-slogan
+	flex(mid)
+	img
+		margin-right: 10px
+
+.header-phone
+	margin-right: 20px
+
+.header-soc
+	flex(mid)
+	grid-gap 10px
+
+.header-soc__el
+	size 40px
+	tr()
+	&:hover
+		border-color darken($border-color,10)
+
+.icon--arrow
+	width: 40px
+	height: 10px
+	margin-left: 10px
+
+.banner
+	f()
+	position relative
+	padding-top: 120px
+.banner-content
+	width: 60%
+.banner-content__title
+	font-size: 64px
+	@extend .type--header
+	line-height: 1
+	margin-bottom: 32px
+
+.banner-content__sub
+	f()
+	align-items: flex-start
+	margin-bottom: 32px
+.banner-content__sub-icon
+	margin-right: 15px
+	margin-top: 15px
+.banner-content__sub-text
+	font-size: 24px
+
+.banner-img
+	position absolute
+	top 5%
+	right: -10%
+
+.offer
+	f()
+	z-index 10
+	position relative
+	align-items center
+	margin-top: 100px
+	margin-bottom: 100px
+
+.offer-wrap
+	//background radial-gradient(121.43% 121.43% at 10.55% 167.52%, rgba(211, 194, 182, 0.15) 0%, rgba(163, 131, 107, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%) , radial-gradient(54.13% 54.13% at 2.68% -6.81%, rgba(211, 194, 182, 0.15) 0%, rgba(163, 131, 107, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), radial-gradient(73.77% 163.36% at 99.42% 4.02%, rgba(211, 194, 182, 0.15) 0%, rgba(163, 131, 107, 0.15) 0.01%, rgba(255, 255, 255, 0.15) 100%) , #FFFFFF;
+	border-radius 0 68px 68px 0
+	flex-grow 1
+
+
+.need-list
+	column-count 2
+
+
+

@@ -1,0 +1,265 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.header
+		.main-cont
+			.header-cont
+				a(href="/").logo
+					img(src="img/logo.svg", alt="")
+				.header-slogan.ml-a
+					img(src="img/dot.svg", alt="")
+					.type--main Работаю онлайн по всему миру
+				a(href="tel:+7 910 582-14-78").header-phone.ml-a +7 910 582-14-78
+				.header-soc
+					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+						+icon("soc-telegram","icon icon--mark icon--20")
+					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+						+icon("soc-wp-light","icon icon--mark icon--20")
+					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+						+icon("soc-inst-light","icon icon--mark icon--20")
+	.content
+		.main-cont
+			.banner
+				.banner-content
+					.banner-content__title Раскрою ваш <br> потенциал <span class="type--mark"> на 100% </span> <br> и доведу до результата
+					.banner-content__sub
+						img(src="img/lineDot.svg", alt="").banner-content__sub-icon
+						.banner-content__sub-text Жизнь слишком коротка <br> чтобы откладывать ее на завтра
+					.banner-content__btn
+						.btn.btn--md.btn--mark
+							.f.f-mid
+								span Записаться на диагностическую сессию
+								+icon("long-arrow-right","icon icon--arrow")
+				.banner-img
+					img(src="img/person-1.png", alt="")
+
+			.offer
+				.offer-img
+					img(src="img/book.png", alt="")
+				.offer-wrap.bg--gray.psv-48.psh-64
+					.type--32.mb-24.type--header Получи <span class="type--mark">бесплатно</span>&nbsp;супер полезный чек-лист
+					.f.f-aic.mb-24
+						.type-20.mr-16 Чек-лист «Мое идеальное утро продуктивного дня»
+						.br-16.psv-8.psh-10.bg--mark.type--white.type--lh-1_2 Практика
+
+					.f.gap-16.mb-16
+						input(type="text" placeholder="Ваше имя").input
+						input(type="text" placeholder="Ваш телефон").input
+						.btn.btn--md.btn--mark
+							.f.f-mid
+								span Получить чек-лист
+								+icon("long-arrow-right","icon icon--arrow")
+					.type--main Нажимая кнопку получить чек-лист вы соглашаетесь с
+						a(href="#").link--mark условиями конфиденциальности
+
+			.type--44.type--header.mb-32 Для кого необходим коучинг?
+
+			.need-list.mb-32
+				-
+					var items = [
+						'Менеджеры среднего и высшего звена',
+						'Те, кто хочет навести порядок в жизни',
+						'Те, кто чувствуют в себе потенциал, и хочет реализовать его на 100%',
+						'Предприниматели и руководители компаний',
+						'Те, кто запутался и не знает следующий шаг к своей лучшей жизни',
+						'Те, кто устал от постоянных срывов и диет и хочет уже похудеть и построить тело мечты',
+						'Те, кто ищет себя и свое предназначение в жизни и хочет заниматься любимым делом и получать удовольствие от жизни',
+						'Те, кто ценит свое время и ресурсы, поэтому хочет достигать целей максимально быстро и экологично для себя и окружающих',
+						'Те, кто уже достиг многого и понимает, что может достичь в разы больше',
+						];
+				each item in items
+					.br-20.p-16.bg--gray.mb-16
+						.f.f-aic
+							img(src="img/dot.svg", alt="").icon--32.mr-12
+							.type--main #{item}
+			.btn.btn--md.btn--mark.mb-80
+				.f.f-mid
+					span Записаться на диагностическую сессию
+					+icon("long-arrow-right","icon icon--arrow")
+			
+			.row.gap-20.mb-80
+				.g-1-4
+					img(src="img/person-2.jpg", alt="")
+				.g-5-12
+					.w90.ml-a
+						.type--44.type--header.mb-32 Обо мне:
+						.g.g-2.gap-20
+							-
+								var items = [
+									'Executive Business and Life coach ICF',
+									'Член национальной федерации профессиональных менторов и коучей',
+									'Предприниматель, основатель компании BeFit — топ 3 на рынке доставки рационов готового питания в России по мнению РБК',
+									'Лауреат премии «Женщина — как символ»за вклад в индустрию ЗОЖ и здорового питания',
+									'Дипломированный нутрициолог и специалист по питанию',
+									'Закончила ВШЭ Product Executive',
+									'Автор метода «Импульс и технологии достижения целей» и построения стратегии «Маршрут построен»',
+
+								];
+							each item in items
+								.br-20.p-16.bg--gray.dib
+									.f.f-col.h100.f-jcc
+										.f.f-aic
+											img(src="img/dot.svg", alt="").icon--32.mr-12
+											.type--main #{item}
+
+			.type--44.type--header.mb-32 Что вы получите в работе со мной, <br> помимо результатов?
+
+			.g.g-3.gap-20.mb-80
+				.br-44.p-32.bor.bor--border
+					img(src="img/line-step.svg", alt="").icon-100.mb-24
+					.type--main Пошаговую стратегию реализации Ваших целей
+				.br-44.p-32.bor.bor--border
+					img(src="img/autor.svg", alt="").icon-100.mb-24
+					.type--main Авторские методики и практики работы со стрессами снятия напряжения
+				.br-44.p-32.bor.bor--border
+					img(src="img/recomendation.svg", alt="").icon-100.mb-24
+					.type--main Рекомендации по питанию и образу жизни для поддержания себя в состоянии максимум энергии и мотивации к свершениям
+
+			.type--44.type--header.mb-32 Еще сомневаетесь?
+			.js-tab-wrap.mb-80
+				.f.f-aic.gap-20.mb-32
+					.type-20 С какими запросами <br> ко мне обращаться:
+					.f.f-aic.gap-20.js-tick-cont
+						.btn.btn--light.btn--md.js-tick.js-tab.active Работа и карьера
+						.btn.btn--light.btn--md.js-tick.js-tab Бизнес
+						.btn.btn--light.btn--md.js-tick.js-tab Личное
+						.btn.btn--light.btn--md.js-tick.js-tab Другое
+				.willHide.js-tab-cont.active
+					.g.g-3.gap-20
+						-
+							var items = [
+								'Хожу на работу, как на каторгу',
+								'Хочу повысить доход/вырасти в карьере',
+								'Вижу стеклянный потолок',
+								'Не знаю в какую сторону идти дальше',
+								'Не могу добиться повышения',
+							];
+						each item in items
+							.br-20.p-16.bg--gray.dib
+								.f.f-col.h100.f-jcc
+									.f.f-aic
+										img(src="img/dot.svg", alt="").icon--32.mr-12
+										.type--main #{item}
+				.willHide.js-tab-cont
+					.g.g-3.gap-20
+						-
+							var items = [
+								'Не знаю чем хочу заниматься в жизни',
+								'Не знаю с чего начать свое дело',
+								'Боюсь остаться без денег',
+								'Боюсь начать',
+								'Хочу работать удаленно',
+								'Не могу справиться с синдромом самозванца',
+								'Боюсь сделать первый шаг',
+								'Не могу вылезти из операционки',
+								'Боюсь ошибиться',
+								'Бизнес перестал расти и развиваться',
+							];
+						each item in items
+							.br-20.p-16.bg--gray.dib
+								.f.f-col.h100.f-jcc
+									.f.f-aic
+										img(src="img/dot.svg", alt="").icon--32.mr-12
+										.type--main #{item}
+				.willHide.js-tab-cont
+					.g.g-3.gap-20
+						-
+							var items = [
+								'Не хватает компетенций для успешной карьеры и высокого дохода',
+								'Нет уверенности в себе',
+								'Не могу побороть лень',
+								'Бросаю начатое на пол пути',
+							];
+						each item in items
+							.br-20.p-16.bg--gray.dib
+								.f.f-col.h100.f-jcc
+									.f.f-aic
+										img(src="img/dot.svg", alt="").icon--32.mr-12
+										.type--main #{item}
+				.willHide.js-tab-cont
+					.g.g-3.gap-20
+						-
+							var items = [
+								'Хочу избавиться от негативных установок',
+								'Не могу похудеть',
+								'Не хватает энергии',
+								'Хочу иметь выбор',
+								'Хочу проанализировать сферы жизни',
+								'Хочу жизненную стратегию и пошаговый план действий',
+							];
+						each item in items
+							.br-20.p-16.bg--gray.dib
+								.f.f-col.h100.f-jcc
+									.f.f-aic
+										img(src="img/dot.svg", alt="").icon--32.mr-12
+										.type--main #{item}
+
+			.type--44.type--header.mb-32 Услуги
+
+			.g.g-3.gap-20.f-aifs.mb-80
+				.p-32.bor.bor--border.br-44
+					.type--lh-1_2.type--32.type--header.mb-24 Диагностическая сессия - 30 мин
+					.br-20.bor.bor--mark.psv-10.psh-24.dib.mb-24
+						.type--lh-1_2.type--32.type--header БЕСПЛАТНО
+					.btn.btn--md.btn--mark
+						.f.f-mid
+							span Записаться
+							+icon("long-arrow-right","icon icon--arrow")
+
+				.p-32.bor.bor--border.br-44
+					.type--lh-1_2.type--32.type--header.mb-24 Распаковка личности
+					.type--20.mb-12 Для кого
+					.f.mb-32
+						img(src="img/dot.svg", alt="").icon--32.mr-12
+						.type--typePrimary  Для тех, кто хочет систематизировать знания о себе, узнать свои сильные и слабые стороны и получить целую карту контента для своих соц сетей на основе своих ценностей и многогранности личности. Распаковку должен сделать каждый.
+
+					.type--20.mb-12 Что делаем
+					-
+						var items = [
+							'2 часа детального общения и созвоном в зум',
+							'Пбор, систематизация и анализ полученной информации',
+							'Подробная карта Вашей личности, с помощью который Вы сможете делать крутые сторитейлинги',
+							'Продукты и контент в соцсетях. Это готовая система Вашей личности!\n',
+						];
+					each item in items
+						.f.mb-32
+							img(src="img/dot.svg", alt="").icon--32.mr-12
+							.type--typePrimary #{item}
+
+
+					.br-20.bor.bor--mark.psv-10.psh-24.dib.mb-24
+						.type--lh-1_2.type--32.type--header 20 000 руб
+					.btn.btn--md.btn--mark
+						.f.f-mid
+							span Записаться
+							+icon("long-arrow-right","icon icon--arrow")
+
+				.p-32.bor.bor--border.br-44
+					.type--lh-1_2.type--32.type--header.mb-24 Трансформационный коучинг
+					.br-20.bor.bor--mark.psv-10.psh-24.dib.mb-24
+						.type--lh-1_2.type--32.type--header 60 000 руб/месяц
+					.type--typePrimary *после прохождения бесплатной сессии
+
+
+
+			.type--44.type--header.mb-32 Как происходит сотрудничество
+
+			.g.g-4.gap-20.f-aifs.mb-80
+				.p-32.bor.bor--border.br-44.f.f-col.f-aic
+					img(src="img/order.svg", alt="").icon--100.mb-32
+					.type--20.type--center Заявка <br> на сайте
+				.p-32.bor.bor--border.br-44.f.f-col.f-aic
+					img(src="img/docSearch.svg", alt="").icon--100.mb-32
+					.type--20.type--center Диагностическая <br> сессия 30 мин
+				.p-32.bor.bor--border.br-44.f.f-col.f-aic
+					img(src="img/calc.svg", alt="").icon--100.mb-32
+					.type--20.type--center Выбор <br> тарифа
+				.p-32.bor.bor--border.br-44.f.f-col.f-aic
+					img(src="img/aim.svg", alt="").icon--100.mb-32
+					.type--20.type--center Плодотворная <br> работа
+
+	+footer()
+	+modal()
+include ./block_html/_script.pug

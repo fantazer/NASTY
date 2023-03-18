@@ -1,0 +1,434 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 51.2em 933em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.arrow-conner-left:before {
+      background-position: 0em 0em;
+      width: 49.2em;
+      height: 49.2em;
+  }
+
+
+
+
+  .icon.arrow-conner-right:before {
+      background-position: 0em -49.2em;
+      width: 49.2004em;
+      height: 49.2004em;
+  }
+
+
+
+
+  .icon.arrow-down:before {
+      background-position: 0em -98.5em;
+      width: 49.1996em;
+      height: 49.1996em;
+  }
+
+
+
+
+  .icon.arrow-left:before {
+      background-position: 0em -147.7em;
+      width: 49.2em;
+      height: 49.2em;
+  }
+
+
+
+
+  .icon.arrow-right:before {
+      background-position: 0em -196.9em;
+      width: 49.2004em;
+      height: 49.2004em;
+  }
+
+
+
+
+  .icon.arrow-up:before {
+      background-position: 0em -246.2em;
+      width: 49.2002em;
+      height: 49.2002em;
+  }
+
+
+
+
+  .icon.card:before {
+      background-position: 0em -295.5em;
+      width: 3.3em;
+      height: 2.3em;
+  }
+
+
+
+
+  .icon.checked:before {
+      background-position: 0em -297.8em;
+      width: 49.2em;
+      height: 49.2em;
+  }
+
+
+
+
+  .icon.clock:before {
+      background-position: 0em -347em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.close:before {
+      background-position: 0em -398.2em;
+      width: 49.2em;
+      height: 49.2em;
+  }
+
+
+
+
+  .icon.copy:before {
+      background-position: 0em -447.4em;
+      width: 2.1em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.delete:before {
+      background-position: 0em -449.8em;
+      width: 1.8em;
+      height: 2.1em;
+  }
+
+
+
+
+  .icon.download:before {
+      background-position: 0em -451.9em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.edit:before {
+      background-position: 0em -503.1em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.exit:before {
+      background-position: 0em -505.5em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.info:before {
+      background-position: 0em -507.9em;
+      width: 33em;
+      height: 33em;
+  }
+
+
+
+
+  .icon.location:before {
+      background-position: 0em -540.9em;
+      width: 1.8393000000000002em;
+      height: 2.3039em;
+  }
+
+
+
+
+  .icon.lock:before {
+      background-position: 0em -543.3em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.long-arrow-right:before {
+      background-position: 0em -545.7em;
+      width: 3.2em;
+      height: 0.6em;
+  }
+
+
+
+
+  .icon.mail:before {
+      background-position: 0em -546.3em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.menu:before {
+      background-position: 0em -597.5em;
+      width: 1.7601em;
+      height: 1.56em;
+  }
+
+
+
+
+  .icon.minus:before {
+      background-position: 0em -599.1em;
+      width: 46.9em;
+      height: 46.9em;
+  }
+
+
+
+
+  .icon.more:before {
+      background-position: 0em -646em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.navigation:before {
+      background-position: 0em -648.4em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.pay-master:before {
+      background-position: 0em -650.8em;
+      width: 3.9em;
+      height: 2.1em;
+  }
+
+
+
+
+  .icon.pay-mir:before {
+      background-position: 0em -652.9em;
+      width: 5.3em;
+      height: 1.5em;
+  }
+
+
+
+
+  .icon.pay-visa:before {
+      background-position: 0em -654.4em;
+      width: 5.2em;
+      height: 1.6em;
+  }
+
+
+
+
+  .icon.pencil:before {
+      background-position: 0em -656em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -707.2em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.phone-call:before {
+      background-position: 0em -709.6em;
+      width: 47.3806em;
+      height: 47.3806em;
+  }
+
+
+
+
+  .icon.play:before {
+      background-position: 0em -757em;
+      width: 49.4148em;
+      height: 49.4148em;
+  }
+
+
+
+
+  .icon.plus:before {
+      background-position: 0em -806.5em;
+      width: 44.8em;
+      height: 44.8em;
+  }
+
+
+
+
+  .icon.question:before {
+      background-position: 0em -851.3em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.reload:before {
+      background-position: 0em -853.7em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.repeat:before {
+      background-position: 0em -856.1em;
+      width: 2.4em;
+      height: 2.2em;
+  }
+
+
+
+
+  .icon.search:before {
+      background-position: 0em -858.3em;
+      width: 2.3em;
+      height: 2.3em;
+  }
+
+
+
+
+  .icon.soc-inst-light:before {
+      background-position: 0em -860.6em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-telegram:before {
+      background-position: 0em -863em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-telegram-light:before {
+      background-position: 0em -865.4em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-viber:before {
+      background-position: 0em -867.8em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-vk:before {
+      background-position: 0em -870.2em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-wp:before {
+      background-position: 0em -872.6em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-wp-light:before {
+      background-position: 0em -875em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.upload:before {
+      background-position: 0em -877.4em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.user:before {
+      background-position: 0em -928.6em;
+      width: 1.9738em;
+      height: 1.9738em;
+  }
+
+
+
+
+  .icon.view:before {
+      background-position: 0em -930.6em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+

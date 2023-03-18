@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <!--link(rel="stylesheet", href="bower/slick-carousel/slick/slick.css")-->
+    <!--link(rel="stylesheet", href="bower/slick-carousel/slick/slick-theme.css")-->
+    <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+    <!--link(rel="stylesheet", href="bower/ion.rangeSlider/css/ion.rangeSlider.css")-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <style type="text/css">
+        .element-list-svg {
+        		display: flex;
+        		justify-content: center;
+        		align-items: center;
+        		flex-wrap: wrap;
+        	}
+        	
+        	.element-list-svg__icon {
+        		width: 12%;
+        		margin: 20px 0;
+        		display: flex;
+        		justify-content: flex-start;
+        		align-items: center;
+        		flex-flow: column;
+        	}
+        	
+        	.element-list-svg__icon .icon-el {
+        		margin-bottom: 10px;
+        		width: 35px;
+        		height: 35px;
+        	}
+        	.block{
+        		height: 40px;
+        		background: #ffcece
+        	}
+        	.element-list-svg__name{
+        		text-align: center;
+        	}
+    </style>
+    <div class="main-cont">
+        <H1>#Типографика</H1>
+        <h2>##Заголовки</h2>
+        <h1>Заголовок h1</h1>
+        <h2>Заголовок h2</h2>
+        <h3>Заголовок h3</h3>
+        <h4>Заголовок h4</h4>
+        <h5>Заголовок h5</h5>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Текст</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">Location config: app/css/variable/config/_typography.styl</div>
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                <a class="link--mark mr-12" href="#">This is mark link</a>. Accusamus atque consequuntur deleniti ducimus eius itaque iure laborum laudantium natus perspiciatis.</p>
+            <p>Lorem ipsum dolor sit amet,
+                <a class="link--text mr-12" href="#">This is decoration link</a>consectetur adipisicing elit. Ab ad, alias aliquid amet autem deleniti dolor eligendi eos esse, fuga incidunt itaque iure minus officiis quasi quo sequi suscipit tempora tenetur totam. Alias aperiam commodi deserunt
+                facilis mollitia nobis provident.</p>
+            <ul>
+                <li>пункт 1</li>
+                <li>пункт 2</li>
+                <li>пункт 3</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit, omnis velit voluptate. Ab ad adipisci beatae consectetur consequuntur cum cumque delectus dolor doloremque ducimus earum error eveniet hic illum
+                incidunt iste labore laborum molestiae nemo non, pariatur, possimus qui quia quisquam rem sit, suscipit tempore unde.</p>
+        </div>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Text Size</h2>
+        <h3>###Text Size later naming</h3>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.type--(xl,lgx,lg,mdx,md,main,sm,xs)</div>
+        <div class="text mb-48">
+            <div class="p type--xl">
+                <span class="type--w700 type--orange mr-12">.type--xl</span>This is simple text</div>
+            <div class="p type--lgx">
+                <span class="type--w700 type--orange mr-12">.type--lgx</span>This is simple text</div>
+            <div class="p type--lg">
+                <span class="type--w700 type--orange mr-12">.type--lg</span>This is simple text</div>
+            <div class="p type--mdx">
+                <span class="type--w700 type--orange mr-12">.type--mdx</span>This is simple text</div>
+            <div class="p type--md">
+                <span class="type--w700 type--orange mr-12">.type--md</span>This is simple text</div>
+            <div class="p type--main">
+                <span class="type--w700 type--orange mr-12">.type--main</span>This is simple text</div>
+            <div class="p type--sm">
+                <span class="type--w700 type--orange mr-12">.type--sm</span>This is simple text</div>
+            <div class="p type--xs">
+                <span class="type--w700 type--orange mr-12">.type--sm</span>This is simple text</div>
+        </div>
+        <h3>### Text size number naming</h3>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.(xl,lg,md,sm,xs)__type--#name#</div>
+        <div class="text">
+            <div class="p type--64">
+                <span class="type--w700 type--orange mr-12">.type--64</span>This is simple text</div>
+            <div class="p type--44">
+                <span class="type--w700 type--orange mr-12">.type--44</span>This is simple text</div>
+            <div class="p type--32">
+                <span class="type--w700 type--orange mr-12">.type--32</span>This is simple text</div>
+            <div class="p type--24">
+                <span class="type--w700 type--orange mr-12">.type--24</span>This is simple text</div>
+            <div class="p type--20">
+                <span class="type--w700 type--orange mr-12">.type--20</span>This is simple text</div>
+            <div class="p type--18">
+                <span class="type--w700 type--orange mr-12">.type--18</span>This is simple text</div>
+            <div class="p type--16">
+                <span class="type--w700 type--orange mr-12">.type--16</span>This is simple text</div>
+            <div class="p type--14">
+                <span class="type--w700 type--orange mr-12">.type--14</span>This is simple text</div>
+            <div class="p type--12">
+                <span class="type--w700 type--orange mr-12">.type--12</span>This is simple text</div>
+        </div>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Text align</h2>
+        <div class="text">
+            <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.(xl,lg,md,sm,xs)__type--#name#</div>
+            <p class="type--left">
+                <span class="type--w700 type--orange mr-12">.type--left</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+            <p class="type--mid">
+                <span class="type--w700 type--orange mr-12">.type--mid</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+            <p class="type--right">
+                <span class="type--w700 type--orange mr-12">.type--right</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        </div>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Text width</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.(xl,lg,md,sm,xs)__type--#name#</div>
+        <p class="type--w700">
+            <span class="type--orange mr-12">.type--w700</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        <p class="type--w600">
+            <span class="type--orange mr-12">.type--w600</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        <p class="type--w500">
+            <span class="type--orange mr-12">.type--w500</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        <p class="type--w400">
+            <span class="type--orange mr-12">.type--w400</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        <p class="type--w300">
+            <span class="type--orange mr-12">.type--w300</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate delectus fuga impedit,</p>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Text line height</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.type--lh-#name#</div>
+        <p class="type--lh-1">
+            <span class="type--orange mr-12 type--w700">.type--lh-1</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur aut consectetur consequatur cupiditate dolore dolores, ea error explicabo fuga incidunt laboriosam laudantium maiores, minus nam possimus quaerat
+            quis reiciendis sed sint? Ducimus fuga ipsam, laboriosam nihil qui repudiandae voluptas?</p>
+        <p class="type--lh-1_2">
+            <span class="type--orange mr-12 type--w700">.type--lh-1_2</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem blanditiis deleniti deserunt dolore, ducimus earum esse facere id illum nam omnis quasi, quos reprehenderit tempora unde voluptas voluptatum! Debitis,
+            dignissimos doloribus labore nulla omnis quam voluptas voluptatum. Accusantium, eos.</p>
+        <p class="type--lh-1_4">
+            <span class="type--orange mr-12 type--w700">.type--lh-1_4</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deserunt error non! Dolorem expedita maxime nesciunt sunt voluptatibus. Accusamus ad adipisci aliquam, beatae cum cumque delectus est eum exercitationem
+            iste minus nesciunt non quaerat quia quidem quis quod repudiandae veritatis!</p>
+        <p class="type--lh-1_6">
+            <span class="type--orange mr-12 type--w700">.type--lh-1_6</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A inventore minus nemo nisi vitae? Aperiam architecto hic illo labore odit qui repellendus, repudiandae similique tenetur. Aspernatur atque cumque cupiditate dolorem
+            ea ipsam labore, maiores nihil nulla quam recusandae sit tempora.</p>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Type color</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.type--#color name#</div>
+        <p class="type--typePrimary">
+            <span class="type--orange mr-12 type--w700">.type--typePrimary</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur aut consectetur consequatur cupiditate dolore dolores, ea error explicabo fuga incidunt laboriosam laudantium maiores, minus nam possimus
+            quaerat quis reiciendis sed sint? Ducimus fuga ipsam, laboriosam nihil qui repudiandae voluptas?</p>
+        <p class="type--typeSecondary">
+            <span class="type--orange mr-12 type--w700">.type--typeSecondary</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur aut consectetur consequatur cupiditate dolore dolores, ea error explicabo fuga incidunt laboriosam laudantium maiores, minus nam possimus
+            quaerat quis reiciendis sed sint? Ducimus fuga ipsam, laboriosam nihil qui repudiandae voluptas?</p>
+        <p class="type--typeDisable">
+            <span class="type--orange mr-12 type--w700">.type--typeDisable</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur aut consectetur consequatur cupiditate dolore dolores, ea error explicabo fuga incidunt laboriosam laudantium maiores, minus nam possimus
+            quaerat quis reiciendis sed sint? Ducimus fuga ipsam, laboriosam nihil qui repudiandae voluptas?</p>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Icon size</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.icon--(xl,lg,md,sm,xs) + .(xl,lg,md,sm,xs)__icon--(64,44,32,24,20,16,12)</div>
+        <div class="f f-aic gap-4">
+            <svg class="icon icon--64 xl__icon--12">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--lgx">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--lg">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--mdx">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--sm">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--xs">
+                <use xlink:href="#star-full"></use>
+            </svg>
+        </div>
+        <div class="el bor--graySnow bor-b bor msv-48"></div>
+        <h2>##Icon color</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">.icon--#color name#</div>
+        <div class="f f-aic gap-4">
+            <svg class="icon icon--32 icon--red">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--red">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--red">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--red">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--red">
+                <use xlink:href="#star-full"></use>
+            </svg>
+        </div>
+        <div class="f f-aic gap-4">
+            <svg class="icon icon--32 icon--orange">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--orange">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--orange">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--orange">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--orange">
+                <use xlink:href="#star-full"></use>
+            </svg>
+        </div>
+        <div class="f f-aic gap-4">
+            <svg class="icon icon--32 icon--yellow">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--yellow">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--yellow">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--yellow">
+                <use xlink:href="#star-full"></use>
+            </svg>
+            <svg class="icon icon--32 icon--yellow">
+                <use xlink:href="#star-full"></use>
+            </svg>
+        </div>
+        <h1>#Отступы</h1>
+        <h2>##Margin</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__m-#value#</span>- во все стороны</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mt-#value#</span>- вверх</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mr-#value#</span>- вправо</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mb-#value#</span>- вниз</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__ml-#value#</span>- влево</li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__msv-#value#</span>- вверх и низ</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__msh-#value#</span>- влево и вправо</li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mt-a</span>- вверх авто</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mr-a</span>- вправо авто</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__mb-a</span>- вниз авто</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)__ml-a</span>- влево авто</li>
+            </ul>
+        </div>
+        <h2>##Padding</h2>
+        <div class="p-12 type--w700 br-8 mb-12 bg--graySnow">
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_p-#value#</span>- во все стороны</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_pt-#value#</span>- вверх</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_pr-#value#</span>- вправо</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_pb-#value#</span>- вниз</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_pl-#value#</span>- влево</li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_psv-#value#</span>- вверх и вниз</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_psh-#value#</span>- влево и вправо</li>
+            </ul>
+            <ul>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_p-#value#p</span>- во все стороны в процентах</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_psv-#value#p</span>- вверх и вниз в процентах</li>
+                <li>
+                    <span class="type--orange mr-12 type--w700">.(xl,lg,md,sm,xs)_psh-#value#p</span>- влево и вправо в процентах</li>
+            </ul>
+        </div>
+        <h2>Grid fix</h2>
+        <div class="g gap-16 g-12 lg__g-6 md__g-4 sm__g-2 mb-16">
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+        </div>
+        <div class="g gap-16 g-6 md__g-3 sm__g-1 mb-16">
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+        </div>
+        <div class="g gap-16 g-3 sm__g-1 mb-16">
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+            <div class="block br--12"></div>
+        </div>
+        <h2>Grid cols</h2>
+        <div class="row gap-16 mb-16">
+            <div class="g-1-3 lg__g-1-12">
+                <div class="block br--12"></div>
+            </div>
+            <div class="g-5-12 lg__g-1-12">
+                <div class="block br--12"></div>
+            </div>
+        </div>
+        <div class="row gap-16 mb-16">
+            <div class="g-1-4 lg__g-1-12">
+                <div class="block br--12"></div>
+            </div>
+            <div class="g-6-12 lg__g-1-12">
+                <div class="block br--12"></div>
+            </div>
+        </div>
+        <h2>Grid width</h2>
+        <div class="f f-jcsb gap-16 md__fw mb-16">
+            <div class="block br--12 w60 md__w100"></div>
+            <div class="block br--12 w35 md__w100"></div>
+        </div>
+        <div class="f f-jcsb gap-16 md__fw">
+            <div class="block br--12 w80 md__w100"></div>
+            <div class="block br--12 w15 md__w100"></div>
+        </div>
+        <h2>Buttons</h2>
+        <div class="f fw gap-12">
+            <div class="btn btn--md btn--mark">Стандартная</div>
+            <div class="btn btn--md btn--mark disable">Неактивная</div>
+            <div class="btn btn--md btn--light">Дополнительная</div>
+            <div class="btn btn--md btn--light">
+                <div class="f f-mid gap-16">
+                    <span>C иконкой</span>
+                    <svg class="icon icon--sm">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="f fw gap-12">
+            <div class="btn btn--sm btn--mark">Стандартная</div>
+            <div class="btn btn--sm btn--mark disable">Неактивная</div>
+            <div class="btn btn--sm btn--light">Дополнительная</div>
+            <div class="btn btn--sm btn--light">
+                <div class="f f-mid gap-8">
+                    <span>C иконкой</span>
+                    <svg class="icon icon--xs">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <h2>Checkbox + Radio</h2>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--checkbox">
+                    <input class="style-input" type="checkbox" />
+                    <div class="style-input-element">
+                        <svg class="icon">
+                            <use xlink:href="#checked"></use>
+                        </svg>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 1</div>
+                </label>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--checkbox">
+                    <input class="style-input" type="checkbox" checked="checked" />
+                    <div class="style-input-element">
+                        <svg class="icon">
+                            <use xlink:href="#checked"></use>
+                        </svg>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 2</div>
+                </label>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--checkbox disable">
+                    <input class="style-input" type="checkbox" checked="false" />
+                    <div class="style-input-element">
+                        <svg class="icon">
+                            <use xlink:href="#checked"></use>
+                        </svg>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 2</div>
+                </label>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--radio">
+                    <input class="style-input" type="radio" name="list" checked="true" />
+                    <div class="style-input-element">
+                        <div class="icon-radio"></div>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 1</div>
+                </label>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--radio">
+                    <input class="style-input" type="radio" name="list" />
+                    <div class="style-input-element">
+                        <div class="icon-radio"></div>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 2</div>
+                </label>
+            </div>
+        </div>
+        <div class="mb-12">
+            <div class="check-el">
+                <label class="style-label style-label--radio disable">
+                    <input class="style-input" type="radio" name="list" />
+                    <div class="style-input-element">
+                        <div class="icon-radio"></div>
+                    </div>
+                    <div class="style-input-text">Выбрать пункт 3</div>
+                </label>
+            </div>
+        </div>
+        <h2>Switch</h2>
+        <div class="buttons-list">
+            <div class="mb-12">
+                <div class="switch js-toggle"></div>
+            </div>
+            <div class="mb-12">
+                <div class="switch active js-toggle"></div>
+            </div>
+            <div class="mb-12">
+                <div class="switch disabled"></div>
+            </div>
+        </div>
+        <a class="link--mark" href="#">Цветная ссылка</a>
+        <a class="link--main" href="#">Новая ссылка</a>
+        <a class="link--text" href="#">Ссылка в тексте</a>
+        <div class="forms">
+            <div class="input-row error mb-16">
+                <div class="type--main type--w700 mb-12">Название поля</div>
+                <input class="input" type="text" placeholder="Ваше имя" />
+                <div class="error-msg">Введённые данные не должны содержать цифры</div>
+            </div>
+            <div class="g gap-16 mb-16 g-2 md__g-2 sm__g-1">
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+            </div>
+            <div class="g gap-16 mb-16 g-4 md__g-2 sm__g-1">
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+                <div class="input-row">
+                    <div class="type--main type--w700 mb-12">Название поля</div>
+                    <input class="input" type="text" placeholder="Ваше имя" />
+                </div>
+            </div>
+            <div class="input-row mb-16">
+                <div class="type--main type--w700 mb-12">Название поля</div>
+                <textarea class="input" name="text" cols="30" rows="10"></textarea>
+            </div>
+            <div class="check-el">
+                <label class="style-label style-label--checkbox">
+                    <input class="style-input" type="checkbox" />
+                    <div class="style-input-element">
+                        <svg class="icon">
+                            <use xlink:href="#checked"></use>
+                        </svg>
+                    </div>
+                    <div class="style-input-text">Я ознакомился с
+                        <a href="#">политикой конфиденциальности</a>,
+                        <a href="#">публичной офертой</a>и даю согласие на обработку моих персональных данных</div>
+                </label>
+            </div>
+        </div>
+        <div class="dropdown">
+            <input type="hidden" name="name" value="0" />
+            <div class="dropdown-current">
+                <div class="dropdown-current__val">Начальное значение</div>
+                <svg class="icon">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-menu__el" data-value="#">Значение 1</div>
+                <div class="dropdown-menu__el" data-value="#">Значение 2</div>
+                <div class="dropdown-menu__el" data-value="#">Значение 3</div>
+            </div>
+        </div>
+        <div class="element-list-svg">
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-conner-left"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-conner-left</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-conner-right"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-conner-right</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-down"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-down</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-left</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-right</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#arrow-up"></use>
+                </svg>
+                <div class="element-list-svg__name">arrow-up</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#card"></use>
+                </svg>
+                <div class="element-list-svg__name">card</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#checked"></use>
+                </svg>
+                <div class="element-list-svg__name">checked</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#clock"></use>
+                </svg>
+                <div class="element-list-svg__name">clock</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#close"></use>
+                </svg>
+                <div class="element-list-svg__name">close</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#copy"></use>
+                </svg>
+                <div class="element-list-svg__name">copy</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#delete"></use>
+                </svg>
+                <div class="element-list-svg__name">delete</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#download"></use>
+                </svg>
+                <div class="element-list-svg__name">download</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#edit"></use>
+                </svg>
+                <div class="element-list-svg__name">edit</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#exit"></use>
+                </svg>
+                <div class="element-list-svg__name">exit</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#info"></use>
+                </svg>
+                <div class="element-list-svg__name">info</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#location"></use>
+                </svg>
+                <div class="element-list-svg__name">location</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#lock"></use>
+                </svg>
+                <div class="element-list-svg__name">lock</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#long-arrow-right"></use>
+                </svg>
+                <div class="element-list-svg__name">long-arrow-right</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#mail"></use>
+                </svg>
+                <div class="element-list-svg__name">mail</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#menu"></use>
+                </svg>
+                <div class="element-list-svg__name">menu</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#minus"></use>
+                </svg>
+                <div class="element-list-svg__name">minus</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#more"></use>
+                </svg>
+                <div class="element-list-svg__name">more</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#navigation"></use>
+                </svg>
+                <div class="element-list-svg__name">navigation</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#pay-master"></use>
+                </svg>
+                <div class="element-list-svg__name">pay-master</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#pay-mir"></use>
+                </svg>
+                <div class="element-list-svg__name">pay-mir</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#pay-visa"></use>
+                </svg>
+                <div class="element-list-svg__name">pay-visa</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#pencil"></use>
+                </svg>
+                <div class="element-list-svg__name">pencil</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#phone-call"></use>
+                </svg>
+                <div class="element-list-svg__name">phone-call</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                <div class="element-list-svg__name">phone</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#play"></use>
+                </svg>
+                <div class="element-list-svg__name">play</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#plus"></use>
+                </svg>
+                <div class="element-list-svg__name">plus</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#question"></use>
+                </svg>
+                <div class="element-list-svg__name">question</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#reload"></use>
+                </svg>
+                <div class="element-list-svg__name">reload</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#repeat"></use>
+                </svg>
+                <div class="element-list-svg__name">repeat</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#search"></use>
+                </svg>
+                <div class="element-list-svg__name">search</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-inst-light"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-inst-light</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-telegram-light"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-telegram-light</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-telegram"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-telegram</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-viber"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-viber</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-vk"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-vk</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-wp-light"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-wp-light</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#soc-wp"></use>
+                </svg>
+                <div class="element-list-svg__name">soc-wp</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#sprite"></use>
+                </svg>
+                <div class="element-list-svg__name">sprite</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#upload"></use>
+                </svg>
+                <div class="element-list-svg__name">upload</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#user"></use>
+                </svg>
+                <div class="element-list-svg__name">user</div>
+            </div>
+            <div class="element-list-svg__icon">
+                <svg class="icon-el">
+                    <use xlink:href="#view"></use>
+                </svg>
+                <div class="element-list-svg__name">view</div>
+            </div>
+        </div>
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <!--script(src='bower/slick-carousel/slick/slick.js')-->
+    <!--script(src='bower/jquery.nicescroll/jquery.nicescroll.min.js')-->
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>
