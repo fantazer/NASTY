@@ -103,7 +103,8 @@ body
 	position: absolute
 	opacity 0
 	transition transform .6s, opacity .4s
-	max-width 400px
+	max-width 340px
+	min-width 300px
 	left -9999px
 	top -9999px
 	&.active
@@ -130,7 +131,7 @@ body
 	margin: 20px auto
 	background: white
 	position: relative
-	padding: 40px 45px
+	padding: 30px
 	br(40px)
 
 .modal-close
@@ -141,8 +142,8 @@ body
 	top: 20px
 	right: 20px
 	cp()
-	size 50px
-	br(20px)
+	size 40px
+	br(12px)
 	flex(mid)
 	z-index 10
 	background: #f8f8f8
@@ -279,5 +280,163 @@ body
 .need-list
 	column-count 2
 
+// review slider
+.slider-overflowRight
+	+below(1024px)
+		margin-right: -42px
+		overflow: hidden
+	+below(640px)
+		margin-right: -20px
+.slider-review
+	+below(1024px)
+		margin-right: -42px
+		overflow: hidden
+	+below(640px)
+		margin-right: -20px
+
+.slider-review__el
+	background: white
+	br(12px)
+	overflow hidden
+
+.slider-review__el--border
+	border 1px solid $border-color
+
+.slider-review-head
+	padding: 16px
 
 
+.slider-review-img
+	bg-full()
+	background-position top center
+	padding: 50% 10%
+.slider-review-wrap
+	padding: 24px
+	position relative
+
+
+.slider-review-content
+	overflow auto
+
+.slider-review-weight
+	bottom 20px
+	right: 20px
+
+.slider-review-more
+	span
+		size 3px
+		display inline-block
+		background: black
+		round()
+		margin-bottom: 2px
+		&:last-child
+			margin-bottom: 0
+
+.review-head
+	+below(1024px)
+		margin: 0 0 40px 0
+	flex(between)
+	margin: -28px 0 40px 0
+
+.review-head__info
+	+below(1024px)
+		width: 100%
+	width: 60%
+.review-head__text
+	color $typeSecondary
+.review-control
+	+below(1024px)
+		display none
+
+.slider-control-row
+	f()
+	.slider-control
+		&:first-child
+			margin-right: 24px
+.slider-control
+	flex(mid)
+	tr(all)
+	z-index 10
+	size 80px
+	cp()
+	round()
+	background: white
+	&:hover
+		background: white
+		box-shadow: 0px 12px 32px rgba(41, 42, 53, 0.16);
+		.icon
+			fill black
+	.icon
+		fill black
+		size 24px
+.slider-control--light
+	border 1px solid $border-color
+	background: transparent
+	.icon
+		tr()
+	&:hover
+		background: white
+		border 1px solid white
+		.icon
+			fill black
+
+.slider-extend
+	.slick-slide
+		+below(1024px)
+			margin: 0 8px
+		margin: 0 14px
+	.slick-list
+		+below(1024px)
+			margin: 0 -8px
+		margin: 0 -14px
+// review slider === end
+
+.subscr
+	background: $gray
+	border-radius 68px 68px 0 0
+	padding-bottom: 64px
+
+.subscr-content
+	padding-top: 64px
+
+.subscr-img
+	position relative
+	img
+		position absolute
+		max-width: 125%
+		top -5%
+		right -15%
+
+// footer
+.footer
+	background: #B89E8B
+	padding 32px 0
+
+.footer-cont
+	f()
+	align-items center
+	justify-content space-between
+
+.footer-logo
+	width: 35%
+.footer-scroll
+	+below(640px)
+		order 1
+		margin 0 0 32px 0
+	size 82px
+	round()
+	flex(mid)
+	background: #ffffff1a
+	cp()
+	tr()
+	margin-left: 10%
+	&:hover
+		background: #ffffff26
+		.icon
+			transform translateY(-3px)
+	.icon
+		transform translateY(0)
+		tr()
+		fill white
+		size 24px
+// footer === end

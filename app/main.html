@@ -17,10 +17,8 @@
     <meta name="description" itemprop="description" content="" />
     <!--build:css ./css/vendor.css-->
     <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-    <!--link(rel="stylesheet", href="bower/slick-carousel/slick/slick.css")-->
-    <!--link(rel="stylesheet", href="bower/slick-carousel/slick/slick-theme.css")-->
-    <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
-    <!--link(rel="stylesheet", href="bower/ion.rangeSlider/css/ion.rangeSlider.css")-->
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style-edit.css" />
@@ -30,7 +28,7 @@
     <div class="page">
         <!--block header-->
         <!--block header end-->
-        <div class="header">
+        <div class="header" id="header">
             <div class="main-cont">
                 <div class="header-cont">
                     <a class="logo" href="/">
@@ -42,17 +40,17 @@
                     </div>
                     <a class="header-phone ml-a" href="tel:+7 910 582-14-78">+7 910 582-14-78</a>
                     <div class="header-soc">
-                        <a class="header-soc__el br-round bor bor--border f f-mid" href="#">
+                        <a class="header-soc__el br-round bor bor--border f f-mid" href="https://t.me/strategybe">
                             <svg class="icon icon--mark icon--20">
                                 <use xlink:href="#soc-telegram"></use>
                             </svg>
                         </a>
-                        <a class="header-soc__el br-round bor bor--border f f-mid" href="#">
+                        <a class="header-soc__el br-round bor bor--border f f-mid" href="https://api.whatsapp.com/send?phone=79105821478">
                             <svg class="icon icon--mark icon--20">
                                 <use xlink:href="#soc-wp-light"></use>
                             </svg>
                         </a>
-                        <a class="header-soc__el br-round bor bor--border f f-mid" href="#">
+                        <a class="header-soc__el br-round bor bor--border f f-mid" href="http://instagram.com/nastyasala">
                             <svg class="icon icon--mark icon--20">
                                 <use xlink:href="#soc-inst-light"></use>
                             </svg>
@@ -75,7 +73,7 @@
                                 <br>чтобы откладывать ее на завтра</div>
                         </div>
                         <div class="banner-content__btn">
-                            <div class="btn btn--md btn--mark">
+                            <div class="btn btn--md btn--mark js-modal" data-modal="order">
                                 <div class="f f-mid">
                                     <span>Записаться на диагностическую сессию</span>
                                     <svg class="icon icon--arrow">
@@ -100,18 +98,22 @@
                             <div class="type-20 mr-16">Чек-лист «Мое идеальное утро продуктивного дня»</div>
                             <div class="br-16 psv-8 psh-10 bg--mark type--white type--lh-1_2">Практика</div>
                         </div>
-                        <div class="f gap-16 mb-16">
-                            <input class="input" type="text" placeholder="Ваше имя" />
-                            <input class="input" type="text" placeholder="Ваш телефон" />
-                            <div class="btn btn--md btn--mark">
+                        <form class="f gap-16 mb-16 js-validate f-aifs" action="javascript:void(null);">
+                            <div class="input-row">
+                                <input class="input" type="text" placeholder="Ваше имя" name="name[1]" data-type="name" data-condition="name" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input input-mask--phone" type="text" placeholder="Телефон" name="phone[1]" data-type="phone" data-condition="phone" />
+                            </div>
+                            <button class="btn btn--md btn--mark" type="submit" value="Записаться">
                                 <div class="f f-mid">
                                     <span>Получить чек-лист</span>
                                     <svg class="icon icon--arrow">
                                         <use xlink:href="#long-arrow-right"></use>
                                     </svg>
                                 </div>
-                            </div>
-                        </div>
+                            </button>
+                        </form>
                         <div class="type--main">Нажимая кнопку получить чек-лист вы соглашаетесь с
                             <a class="link--mark" href="#">условиями конфиденциальности</a>
                         </div>
@@ -174,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn btn--md btn--mark mb-80">
+                <div class="btn btn--md btn--mark mb-80 js-modal" data-modal="order">
                     <div class="f f-mid">
                         <span>Записаться на диагностическую сессию</span>
                         <svg class="icon icon--arrow">
@@ -502,7 +504,7 @@
                         <div class="br-20 bor bor--mark psv-10 psh-24 dib mb-24">
                             <div class="type--lh-1_2 type--32 type--header">БЕСПЛАТНО</div>
                         </div>
-                        <div class="btn btn--md btn--mark">
+                        <div class="btn btn--md btn--mark js-modal" data-modal="order">
                             <div class="f f-mid">
                                 <span>Записаться</span>
                                 <svg class="icon icon--arrow">
@@ -539,7 +541,7 @@
                         <div class="br-20 bor bor--mark psv-10 psh-24 dib mb-24">
                             <div class="type--lh-1_2 type--32 type--header">20 000 руб</div>
                         </div>
-                        <div class="btn btn--md btn--mark">
+                        <div class="btn btn--md btn--mark js-modal" data-modal="order">
                             <div class="f f-mid">
                                 <span>Записаться</span>
                                 <svg class="icon icon--arrow">
@@ -579,6 +581,184 @@
                             <br>работа</div>
                     </div>
                 </div>
+                <div class="js-slider-wrap mb-100">
+                    <div class="f f-between mb-32">
+                        <div class="type--44 type--header">Отзывы</div>
+                        <div class="review-control slider-control-row">
+                            <div class="slider-control slider-control--light js-control-left">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+                            </div>
+                            <div class="slider-control slider-control--light js-control-right">
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider-review slider-extend js-slider">
+                            <div class="slider-el-wrap">
+                                <div class="slider-review__el slider-review__el--border">
+                                    <div class="p-16 f f-aic">
+                                        <div class="type--w700">mike_beyond_the_sea</div>
+                                        <div class="slider-review-more f f-col ml-a">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-review-img" style="background-image:url('img/inst-img-1.jpg')"></div>
+                                    <div class="slider-review-wrap">
+                                        <img class="mb-12 pr-5 w100" src="img/review-iconLine.svg" alt="" />
+                                        <div class="slider-review-content scroll-template-light">
+                                            <div class="slider-review-text">Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под
+                                                санкционку в моей жизни)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-el-wrap">
+                                <div class="slider-review__el slider-review__el--border">
+                                    <div class="p-16 f f-aic">
+                                        <div class="type--w700">mike_beyond_the_sea</div>
+                                        <div class="slider-review-more f f-col ml-a">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-review-img" style="background-image:url('img/inst-img-1.jpg')"></div>
+                                    <div class="slider-review-wrap">
+                                        <img class="mb-12 pr-5 w100" src="img/review-iconLine.svg" alt="" />
+                                        <div class="slider-review-content scroll-template-light">
+                                            <div class="slider-review-text">Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под
+                                                санкционку в моей жизни)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-el-wrap">
+                                <div class="slider-review__el slider-review__el--border">
+                                    <div class="p-16 f f-aic">
+                                        <div class="type--w700">mike_beyond_the_sea</div>
+                                        <div class="slider-review-more f f-col ml-a">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-review-img" style="background-image:url('img/inst-img-1.jpg')"></div>
+                                    <div class="slider-review-wrap">
+                                        <img class="mb-12 pr-5 w100" src="img/review-iconLine.svg" alt="" />
+                                        <div class="slider-review-content scroll-template-light">
+                                            <div class="slider-review-text">Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под
+                                                санкционку в моей жизни)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-el-wrap">
+                                <div class="slider-review__el slider-review__el--border">
+                                    <div class="p-16 f f-aic">
+                                        <div class="type--w700">mike_beyond_the_sea</div>
+                                        <div class="slider-review-more f f-col ml-a">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-review-img" style="background-image:url('img/inst-img-1.jpg')"></div>
+                                    <div class="slider-review-wrap">
+                                        <img class="mb-12 pr-5 w100" src="img/review-iconLine.svg" alt="" />
+                                        <div class="slider-review-content scroll-template-light">
+                                            <div class="slider-review-text">Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под
+                                                санкционку в моей жизни)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-el-wrap">
+                                <div class="slider-review__el slider-review__el--border">
+                                    <div class="p-16 f f-aic">
+                                        <div class="type--w700">mike_beyond_the_sea</div>
+                                        <div class="slider-review-more f f-col ml-a">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="slider-review-img" style="background-image:url('img/inst-img-1.jpg')"></div>
+                                    <div class="slider-review-wrap">
+                                        <img class="mb-12 pr-5 w100" src="img/review-iconLine.svg" alt="" />
+                                        <div class="slider-review-content scroll-template-light">
+                                            <div class="slider-review-text">Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под
+                                                санкционку в моей жизни)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscr">
+                <div class="main-cont">
+                    <div class="row gap-20">
+                        <div class="g-1-4 subscr-content">
+                            <div class="type--lh-1_2 type--44 type--header mb-32">Я регулярно публикую крутой и эксклюзивный контент в своих соц. сетях</div>
+                            <a class="btn btn--md btn--md-icon btn--mark mb-16" href="https://t.me/strategybe">
+                                <div class="f f-mid">
+                                    <div class="header-soc__el br-round bor bor--border f f-mid mr-12">
+                                        <svg class="icon icon--mark icon--20">
+                                            <use xlink:href="#soc-telegram"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Подпишись в telegram</span>
+                                </div>
+                            </a>
+                            <a class="btn btn--md btn--md-icon btn--mark mb-16" href="http://instagram.com/nastyasala">
+                                <div class="f f-mid">
+                                    <div class="header-soc__el br-round bor bor--border f f-mid mr-12">
+                                        <svg class="icon icon--mark icon--20">
+                                            <use xlink:href="#soc-inst-light"></use>
+                                        </svg>
+                                    </div>
+                                    <span>Подпишись в instagram</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="g-5-12 subscr-img">
+                            <img src="img/notebook.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="main-cont">
+                    <div class="footer-cont">
+                        <a class="footer-logo" href="/">
+                            <img src="img/logo-light.svg" alt="" />
+                        </a>
+                        <div class="footer-pol">
+                            <a class="mb-12 type--white db" href="/">
+                                <div class="type--white">Политика
+                                    <br>конфиденциальности</div>
+                            </a>
+                            <a class="mb-12 type--white db" href="/">
+                                <div class="type--white">Cookie</div>
+                            </a>
+                        </div>
+                        <div class="footer-rights type--white">© 2023, Anastasiya Nevtsan,
+                            <br>все права защищены</div>
+                        <a class="js-scroll-to footer-scroll" href="#header">
+                            <svg class="icon">
+                                <use xlink:href="#arrow-up"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <!--block footer-->
@@ -594,47 +774,49 @@
                                 <use xlink:href="#close"></use>
                             </svg>
                         </div>
-                        <div class="type--lg type--w700 mb-16">Оставьте заявку</div>
-                        <div class="type--main mb-24">Обращаетесь к нам впервые?
-                            <br>Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!</div>
-                        <form class="validate-form" action="javascript:void(null);">
-                            <div class="g g-1 gap-16">
+                        <div class="type--24 mb-24 type--center type--header">Записаться на диагностическую сессию</div>
+                        <form class="js-validate" action="javascript:void(null);">
+                            <div class="g g-1 gap-16 mb-24">
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                    <input class="input" type="text" placeholder="Ваше имя" name="name[1]" data-type="name" data-condition="name" />
                                 </div>
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                </div>
-                                <div class="mb-24">
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element">
-                                                <svg class="icon">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text">Я ознакомился с
-                                                <a href="#">политикой конфиденциальности</a>,
-                                                <a href="#">публичной офертой</a>и даю согласие на обработку моих персональных данных</div>
-                                        </label>
-                                    </div>
+                                    <input class="input input-mask--phone" type="text" placeholder="Телефон" name="phone[1]" data-type="phone" data-condition="phone" />
                                 </div>
                             </div>
-                            <input class="btn btn--md btn--mark btn--full" type="submit" value="Отправить заявку" />
+                            <button class="btn btn--md btn--mark w100 mb-24" type="submit" value="Записаться">
+                                <div class="type--main">Записаться</div>
+                            </button>
+                            <div class="type--12">Нажимая кнопку записаться вы соглашаетесь с
+                                <a href="/">
+                                    <div class="type--mark type-h--markDark tr">условиями конфиденциальности</div>
+                                </a>
+                            </div>
                         </form>
+                    </div>
+                </div>
+                <div class="modal" data-modal="orderTrue">
+                    <div class="modal-content">
+                        <div class="modal-close js-modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="type--24 mb-24 type--center type--header">Готово</div>
+                        <div class="type--16 mb-24 type--center">Заявка отправлена, с вами
+                            <br>свяжутся в близжайшее время</div>
+                        <div class="btn btn--md btn--mark w100 js-modal-close">Хорошо</div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--.js-modal Открыть модальное окно-->
     </div>
     <!--build:js ./js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>
-    <!--script(src='bower/slick-carousel/slick/slick.js')-->
-    <!--script(src='bower/jquery.nicescroll/jquery.nicescroll.min.js')-->
-    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
-    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <script src="bower/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
     <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>

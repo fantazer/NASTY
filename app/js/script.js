@@ -69,7 +69,7 @@ $(document).ready(function () {
 	//modals===end
 
 	// fix top-menu
-	var shrinkHeader = 250;
+/*	var shrinkHeader = 250;
 	var head = $('.header');
 	var heightHeader = head.height();
 	$(window).scroll(function() {
@@ -82,7 +82,7 @@ $(document).ready(function () {
 					body.css('paddingTop',0);
 					head.removeClass('shrink');
 			}
-	});
+	});*/
 	// fix top-menu === end
 
 	// ============ TRIGGER EVENT ============
@@ -292,6 +292,233 @@ $(document).ready(function () {
 		}
 	});
 	// slide menu === end
+
+	// === custom arrow el ===
+	$('.js-control-right').click(function () {
+		$(this).closest(".js-slider-wrap").find(".js-slider").slick('slickNext');
+	});
+
+	$('.js-control-left').click(function () {
+		$(this).closest(".js-slider-wrap").find(".js-slider").slick('slickPrev');
+	});
+	// custom arrow el === end
+
+	// animate scroll to id
+	$(".js-scroll-to").mPageScroll2id({
+		offset: 0,
+	});
+	$(".js-scroll-toNavWrap .js-scroll-to").click(function () {
+		$('.slide-block').removeClass('slide-block--open');
+		$('.head-toggle').removeClass('slide-block-toggle--open');
+	});
+	// animate scroll to id === end
+
+	// review slider
+	if ($('.slider-review').length) {
+		$('.slider-review').slick({
+			slidesToShow: 3,
+			speed: 800,
+			dots: false,
+			arrows: false,
+			rows: 0,
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3.2,
+					slidesToScroll: 1,
+					infinite: false,
+					arrows: false,
+					dots: false,
+
+				}
+			},
+				{
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 2.2,
+						slidesToScroll: 1,
+						infinite: false,
+						arrows: false,
+						dots: false,
+
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 1.2,
+						slidesToScroll: 1,
+						infinite: false,
+						arrows: false,
+						dots: false,
+
+					}
+				}
+			]
+		});
+	}
+	// review slider === end
+
+		// FORM validate
+	$.validator.addMethod("wordCount",
+		function (value, element, params) {
+			var count = getWordCount(value);
+			if (count >= params[0]) {
+				return true;
+			}
+		},
+		jQuery.validator.format("A minimum of {0} words is required here.")
+	);
+	$.validator.addMethod('fnType', function (value, element) {
+		return value.match(/^[+-]?\d+$/);
+	}, 'Введите правильный телефон');
+
+
+	var validateConfig = {
+		"name": {
+			required: true,
+			minlength: 3,
+			messages: {
+				required: 'Обязательно для заполнения',
+				minlength: 'Коротное имя',
+				wordCount: "Необходимо: Фамилия Имя и Отчество"
+			},
+		},
+		"simpleText": {
+			required: false,
+			minlength: 5,
+			messages: {
+				required: 'Обязательно для заполнения',
+				minlength: 'Текст должен быть длиннее',
+			},
+		},
+		"email": {
+			required: true,
+			email:true,
+			messages: {
+				required: 'Это поле обязательно для заполнения',
+				email: 'Введите правильный адресс'
+			},
+		},
+		"phone": {
+			required: true,
+			minlength: 16,
+			messages: {
+				required: 'Обязательное поле',
+				number: 'Введите правильный номер',
+				minlength: 'Номер должен быть длиннее',
+			},
+		},
+		"age": {
+			required: true,
+			minlength: 2,
+			number:true,
+			messages: {
+				required: 'Обязательное поле',
+				number: 'Не правильный возраст',
+				minlength: 'Номер должен быть длиннее',
+			},
+		}
+	}
+
+	$('.js-validate').each(function () {
+		var currentForm = $(this);
+		$(this).validate({
+			highlight: function (element) { //даем родителю класс если есть ошибка
+				$(element).parent().addClass("field-error");
+			},
+			unhighlight: function (element) {
+				$(element).parent().removeClass("field-error");
+			},
+			rules: {
+				agree: {
+					required: true
+				}
+			},
+			messages: {
+				agree: {
+					required: false
+				}
+			},
+			submitHandler: function () {
+				var currentSendData = '';
+				currentForm.each(function(){
+					$(this).find(".js-input-data").each(function(){
+						currentSendData += "&"+$(this).data('condition')+"="+$(this).val()
+					})
+				})
+				currentSendData += "&subject="+currentForm.data('subject')
+				$.ajax({
+					type: "POST",
+					url: "/main.html",
+					data: currentSendData.slice(1),
+					success: function (data) {
+						console.log(currentSendData.slice(1));
+						closeModal();
+						initModal('orderTrue');
+						$(':input') //очитска формы от данных
+								.not(':button, :submit, :reset, :hidden')
+								.val('')
+								.removeAttr('checked')
+								.removeAttr('selected')
+						setTimeout(function () {
+							$('.modal-close').click();
+							location.reload();
+						}, 5000);
+					}
+				});
+			}
+		})
+		$(this).find(".input").each(function () {
+			$(this).rules("add", validateConfig[$(this).data("type")]);
+		});
+	});
+	// FORM validate === end
+
+	// phone mask
+	var isFieldStart = true;
+	var phoneMaskOption = {
+		'translation': {
+			A: {
+				pattern: /[7,8]/,
+				fallback: '7',
+			},
+		},
+		onKeyPress: function (cep, event, currentField, options) {
+			//console.log("key PRESS");
+			if (cep == '+7(8' && isFieldStart) {
+				currentField.val("+7(")
+				//return isFieldStart = false;
+			}
+			if (cep.indexOf("+8") == 0 && isFieldStart) {
+				//console.log(0);
+				currentField.val(cep.replace("+8(", '+7('))
+				//return isFieldStart = false;
+			}
+			if (cep == '+8' && isFieldStart) {
+				currentField.val("+7")
+				//console.log(cep);
+				//return isFieldStart = false;
+			}
+
+			if (currentField.val().length < 4) {
+				isFieldStart = true
+			}
+		},
+
+	}
+
+	$('.input-mask--phone').on('change', function (e) {
+		$(this).unmask()
+		var data = e.target.value
+		var reg = data.replace(new RegExp('\\+7\\(|8\\(|\\+7|^[8]', 'g'), "")
+		$(this).val(reg).mask('+7(000)000-00-00', phoneMaskOption);
+	})
+
+	$('.input-mask--phone').mask('+A(000)000-00-00', phoneMaskOption);
+	$('.js-mask--date').mask('00/00/0000');
+	// phone mask === end
+
 
 	//window.condition = {};
 	//window.condition.info = info;

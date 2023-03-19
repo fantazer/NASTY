@@ -3,7 +3,7 @@ include block_html/_include.pug
 
 .page
 	+header()
-	.header
+	.header#header
 		.main-cont
 			.header-cont
 				a(href="/").logo
@@ -13,11 +13,11 @@ include block_html/_include.pug
 					.type--main Работаю онлайн по всему миру
 				a(href="tel:+7 910 582-14-78").header-phone.ml-a +7 910 582-14-78
 				.header-soc
-					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+					a(href="https://t.me/strategybe").header-soc__el.br-round.bor.bor--border.f.f-mid
 						+icon("soc-telegram","icon icon--mark icon--20")
-					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+					a(href="https://api.whatsapp.com/send?phone=79105821478").header-soc__el.br-round.bor.bor--border.f.f-mid
 						+icon("soc-wp-light","icon icon--mark icon--20")
-					a(href="#").header-soc__el.br-round.bor.bor--border.f.f-mid
+					a(href="http://instagram.com/nastyasala").header-soc__el.br-round.bor.bor--border.f.f-mid
 						+icon("soc-inst-light","icon icon--mark icon--20")
 	.content
 		.main-cont
@@ -28,7 +28,7 @@ include block_html/_include.pug
 						img(src="img/lineDot.svg", alt="").banner-content__sub-icon
 						.banner-content__sub-text Жизнь слишком коротка <br> чтобы откладывать ее на завтра
 					.banner-content__btn
-						.btn.btn--md.btn--mark
+						.btn.btn--md.btn--mark.js-modal(data-modal="order")
 							.f.f-mid
 								span Записаться на диагностическую сессию
 								+icon("long-arrow-right","icon icon--arrow")
@@ -44,10 +44,12 @@ include block_html/_include.pug
 						.type-20.mr-16 Чек-лист «Мое идеальное утро продуктивного дня»
 						.br-16.psv-8.psh-10.bg--mark.type--white.type--lh-1_2 Практика
 
-					.f.gap-16.mb-16
-						input(type="text" placeholder="Ваше имя").input
-						input(type="text" placeholder="Ваш телефон").input
-						.btn.btn--md.btn--mark
+					form(action="javascript:void(null);").f.gap-16.mb-16.js-validate.f-aifs
+						.input-row
+							input(type="text" placeholder="Ваше имя" class="input" name="name[1]" data-type="name" data-condition="name")
+						.input-row
+							input(type="text" placeholder="Телефон" class="input input-mask--phone" name="phone[1]" data-type="phone" data-condition="phone")
+						button(type="submit" value="Записаться").btn.btn--md.btn--mark
 							.f.f-mid
 								span Получить чек-лист
 								+icon("long-arrow-right","icon icon--arrow")
@@ -74,7 +76,7 @@ include block_html/_include.pug
 						.f.f-aic
 							img(src="img/dot.svg", alt="").icon--32.mr-12
 							.type--main #{item}
-			.btn.btn--md.btn--mark.mb-80
+			.btn.btn--md.btn--mark.mb-80.js-modal(data-modal="order")
 				.f.f-mid
 					span Записаться на диагностическую сессию
 					+icon("long-arrow-right","icon icon--arrow")
@@ -203,7 +205,7 @@ include block_html/_include.pug
 					.type--lh-1_2.type--32.type--header.mb-24 Диагностическая сессия - 30 мин
 					.br-20.bor.bor--mark.psv-10.psh-24.dib.mb-24
 						.type--lh-1_2.type--32.type--header БЕСПЛАТНО
-					.btn.btn--md.btn--mark
+					.btn.btn--md.btn--mark.js-modal(data-modal="order")
 						.f.f-mid
 							span Записаться
 							+icon("long-arrow-right","icon icon--arrow")
@@ -231,7 +233,7 @@ include block_html/_include.pug
 
 					.br-20.bor.bor--mark.psv-10.psh-24.dib.mb-24
 						.type--lh-1_2.type--32.type--header 20 000 руб
-					.btn.btn--md.btn--mark
+					.btn.btn--md.btn--mark.js-modal(data-modal="order")
 						.f.f-mid
 							span Записаться
 							+icon("long-arrow-right","icon icon--arrow")
@@ -260,6 +262,94 @@ include block_html/_include.pug
 					img(src="img/aim.svg", alt="").icon--100.mb-32
 					.type--20.type--center Плодотворная <br> работа
 
+
+			.js-slider-wrap.mb-100
+				.f.f-between.mb-32
+					.type--44.type--header Отзывы
+					.review-control.slider-control-row
+						.slider-control.slider-control--light.js-control-left
+							+icon("arrow-left","icon")
+						.slider-control.slider-control--light.js-control-right
+							+icon("arrow-right","icon")
+				.slider-wrap
+					.slider-review.slider-extend.js-slider
+						- for (var i=1;i<6;i++)
+							.slider-el-wrap
+								.slider-review__el.slider-review__el--border
+									.p-16.f.f-aic
+										.type--w700 mike_beyond_the_sea
+										.slider-review-more.f.f-col.ml-a
+											span
+											span
+											span
+									.slider-review-img(style="background-image:url('img/inst-img-1.jpg')")
+									.slider-review-wrap
+										img(src="img/review-iconLine.svg", alt="").mb-12.pr-5.w100
+										.slider-review-content.scroll-template-light
+											.slider-review-text Мы то - что мы едим.Пожалуй, лучшее мое решение за последнее время - это отказ от вредной пищи, сладкого, мучного и бокальчика вина за ужином. (да, черт подери, сама не верю в это, но Алкоголь тоже попал под санкционку в моей жизни)
+
+
+		.subscr
+			.main-cont
+				.row.gap-20
+					.g-1-4.subscr-content
+						.type--lh-1_2.type--44.type--header.mb-32 Я регулярно публикую крутой и эксклюзивный контент в своих соц. сетях
+						a(href="https://t.me/strategybe").btn.btn--md.btn--md-icon.btn--mark.mb-16
+							.f.f-mid
+								.header-soc__el.br-round.bor.bor--border.f.f-mid.mr-12
+									+icon("soc-telegram","icon icon--mark icon--20")
+								span Подпишись в telegram
+						a(href="http://instagram.com/nastyasala").btn.btn--md.btn--md-icon.btn--mark.mb-16
+							.f.f-mid
+								.header-soc__el.br-round.bor.bor--border.f.f-mid.mr-12
+									+icon("soc-inst-light","icon icon--mark icon--20")
+								span Подпишись в instagram
+
+					.g-5-12.subscr-img
+						img(src="img/notebook.png", alt="")
+
+		.footer
+			.main-cont
+				.footer-cont
+					a(href="/").footer-logo
+						img(src="img/logo-light.svg", alt="")
+					.footer-pol
+						a(href="/").mb-12.type--white.db
+							.type--white Политика <br>  конфиденциальности
+						a(href="/").mb-12.type--white.db
+							.type--white Cookie
+					.footer-rights.type--white © 2023, Anastasiya Nevtsan,<br> все права защищены
+					a(href="#header").js-scroll-to.footer-scroll
+						+icon("arrow-up","icon")
 	+footer()
-	+modal()
+	// init
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="order")
+				.modal-content
+					.modal-close.js-modal-close
+						+icon("close","icon")
+					.type--24.mb-24.type--center.type--header Записаться на диагностическую сессию
+
+					form(action="javascript:void(null);").js-validate
+						.g.g-1.gap-16.mb-24
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input" name="name[1]" data-type="name" data-condition="name")
+							.input-row
+								input(type="text" placeholder="Телефон" class="input input-mask--phone" name="phone[1]" data-type="phone" data-condition="phone")
+						button(type="submit" value="Записаться").btn.btn--md.btn--mark.w100.mb-24
+							.type--main Записаться
+						.type--12 Нажимая кнопку записаться вы соглашаетесь с
+							a(href="/")
+								.type--mark.type-h--markDark.tr условиями конфиденциальности
+			.modal(data-modal="orderTrue")
+				.modal-content
+					.modal-close.js-modal-close
+						+icon("close","icon")
+					.type--24.mb-24.type--center.type--header Готово
+					.type--16.mb-24.type--center Заявка отправлена, с вами <br> свяжутся в близжайшее время
+					.btn.btn--md.btn--mark.w100.js-modal-close Хорошо
+
+
 include ./block_html/_script.pug

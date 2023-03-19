@@ -1,6 +1,6 @@
 // === Inputs ===
 .input
-	padding 20px 30px
+	padding 18px 30px
 	border 1px solid $border-color
 	resize: none
 	outline: 0 !important
@@ -16,6 +16,13 @@
 		@extend .disabled
 	&:hover
 		border 1px solid $borderHover
+
+.field-error
+	.input
+		border-color $mark
+	.error
+		font-size: 12px
+		color $markDark
 
 // calc border size
 for $listBrItem in $listBr
